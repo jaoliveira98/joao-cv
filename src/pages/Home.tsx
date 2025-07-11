@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import Terminal from "./components/Terminal";
-import CodeEditor from "./components/CodeEditor";
+import CodeEditor from "../components/ui/CodeEditor";
+import Terminal from "../components/layout/Terminal";
 
 const HTMLCode = `<html lang="en">
   <head>
@@ -17,7 +17,7 @@ const HTMLCode = `<html lang="en">
 const App = () => {
   return (
     <Wrapper>
-      <Terminal filePath="/homepage">
+      <Terminal filePath="homepage.html">
         <CodeEditor code={HTMLCode} />
       </Terminal>
     </Wrapper>
@@ -26,15 +26,11 @@ const App = () => {
 
 const Wrapper = styled.div`
   align-items: center;
-  color: white;
   display: flex;
   height: 100vh;
   margin: auto;
   max-width: 700px;
-
-  pre {
-    margin: 1rem 0;
-  }
+  width: 100%;
 `;
 
 export default App;

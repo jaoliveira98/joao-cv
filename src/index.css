@@ -2,15 +2,25 @@
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+
+  /* Color Variables */
+  --color-bg-dark: #181616;
+  --color-bg-terminal: #303030;
+  --color-border-gray: #6a6a6a;
+  --color-text-light-gray: #c8c8c8;
+  --color-text-light: #e6e6e6;
+  --color-white: #ffffff;
+  --color-terminal-red: #ff6057;
+  --color-terminal-yellow: #ffbd2e;
+  --color-terminal-green: #27c93f;
+  --color-active-nav: rgb(158, 188, 219);
 }
 
 * {
   margin: 0;
+  box-sizing: border-box;
 }
 
-/*
-display light grey lines in the background like if it was a grid
-*/
 body {
-  background: #181616;
+  background: var(--color-bg-dark);
 }
