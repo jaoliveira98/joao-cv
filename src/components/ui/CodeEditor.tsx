@@ -31,7 +31,23 @@ const CodeEditor = ({ code }: CodeEditorProps) => {
 };
 
 const CodeContainer = styled.pre`
-  font-family: "Courier New", monospace;
+  margin: 0;
+  padding: 0 1rem;
+  overflow-y: auto;
+  max-height: 700px;
+
+  &::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--color-border-gray);
+    border-radius: 0.5rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
 `;
 
 const CodeLine = styled.div`
@@ -41,13 +57,14 @@ const CodeLine = styled.div`
 `;
 
 const LineNumber = styled.span`
-  color: #6a6a6a;
+  color: var(--color-border-gray);
   min-width: 1.4rem;
   text-align: right;
+  user-select: none;
 `;
 
 const CodeContent = styled.code`
-  color: #e6e6e6;
+  color: var(--color-text-light);
   white-space: pre;
   display: flex;
   align-items: center;

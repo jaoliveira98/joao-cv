@@ -7,7 +7,7 @@ const PulsingCursor = () => {
 const Cursor = styled.div`
   width: 1px;
   height: 1.2em;
-  background: #e6e6e6;
+  background: var(--color-text-light);
   animation: pulse 0.6s infinite;
 
   @keyframes pulse {
