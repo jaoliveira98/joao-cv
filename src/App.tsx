@@ -1,35 +1,40 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import styled from "styled-components";
+import Terminal from "./components/Terminal";
+import CodeEditor from "./components/CodeEditor";
 
-function App() {
-  const [count, setCount] = useState(0)
+const HTMLCode = `<html lang="en">
+  <head>
+    <title>JOAO CV</title>
+  </head>
+  <body>
+    <h1>Hi 👋 I'm João</h1>
+    <p>
+      I'm a software developer with a passion for building web applications{{CURSOR}}
+    </p>
+  </body>
+</html>`;
 
+const App = () => {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <Wrapper>
+      <Terminal filePath="/homepage">
+        <CodeEditor code={HTMLCode} />
+      </Terminal>
+    </Wrapper>
+  );
+};
 
-export default App
+const Wrapper = styled.div`
+  align-items: center;
+  color: white;
+  display: flex;
+  height: 100vh;
+  margin: auto;
+  max-width: 700px;
+
+  pre {
+    margin: 1rem 0;
+  }
+`;
+
+export default App;
