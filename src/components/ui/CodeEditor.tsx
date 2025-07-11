@@ -53,7 +53,7 @@ const CodeContainer = styled.pre`
 const CodeLine = styled.div`
   display: flex;
   gap: 1rem;
-  align-items: center;
+  align-items: flex-start;
 `;
 
 const LineNumber = styled.span`
@@ -61,13 +61,16 @@ const LineNumber = styled.span`
   min-width: 1.4rem;
   text-align: right;
   user-select: none;
+  padding-top: 0.1rem;
 `;
 
 const CodeContent = styled.code`
   color: var(--color-text-light);
-  white-space: pre;
+  white-space: pre-wrap;
   display: flex;
   align-items: center;
+  flex: 1;
+  word-break: break-word;
 `;
 
 export default CodeEditor;
