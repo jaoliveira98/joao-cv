@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import Terminal from "../components/layout/Terminal";
 import CodeEditor from "../components/ui/CodeEditor";
+import TerminalHeader from "../components/layout/TerminalHeader";
+import TerminalFooter from "../components/layout/TerminalFooter";
 
 const TypeScriptCode = `random stuff
 random stuff
@@ -34,8 +36,10 @@ random stuff`;
 const CodeSnippets = () => {
   return (
     <Wrapper>
-      <Terminal filePath="js &gt; code-snippets.ts">
+      <Terminal>
+        <TerminalHeader filePath="js &gt; code-snippets.ts" />
         <CodeEditor code={TypeScriptCode} />
+        <TerminalFooter />
       </Terminal>
     </Wrapper>
   );
