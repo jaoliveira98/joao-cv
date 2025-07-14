@@ -36,6 +36,7 @@ const Wrapper = styled.a`
     color: var(--color-bg-dark);
   }
 
+  /* TODO: Move span out of styled-component and make it a component */
   span {
     color: var(--color-active-nav);
   }
