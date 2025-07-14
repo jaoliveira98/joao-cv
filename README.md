@@ -1,69 +1,103 @@
-# React + TypeScript + Vite
+# joao-cv
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern interactive CV portfolio built with React, TypeScript, and Vite, featuring a live code editor interface and customizable styling.
 
-Currently, two official plugins are available:
+## Table of Contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Demo](#demo)
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Scripts](#scripts)
+- [Project Structure](#project-structure)
+- [Components & Pages](#components--pages)
+- [Context & Hooks](#context--hooks)
+- [Data & Styles](#data--styles)
+- [Contributing](#contributing)
+- [License](#license)
 
-## Expanding the ESLint configuration
+## Demo
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+screenshot to be added
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Features
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- Simulated terminal interface with custom header and footer
+- Live code editor page displaying CV content in HTML & CSS
+- Responsive navigation menu and UI components
+- Global state management using React Context
+- Modular, type-safe codebase with TypeScript
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Tech Stack
+
+- React 18
+- TypeScript
+- Vite
+- ESLint & Prettier for code quality
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js v16 or higher
+- npm v8 or higher
+
+### Installation
+
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/jaoliveira98/joao-cv.git
+   cd joao-cv
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+## Scripts
+
+- `npm run dev` Start development server with HMR
+- `npm run build` Build for production
+- `npm run preview` Preview production build locally
+- `npm run lint` Run ESLint checks
+
+## Project Structure
+
+```plaintext
+joao-cv/
+├── public/               # Static assets (images, icons)
+├── src/                  # Source code
+│   ├── components/       # Reusable UI components
+│   │   ├── layout/       # Terminal layout (Header, Footer)
+│   │   ├── navigation/   # Navbar and menu
+│   │   └── ui/           # Miscellaneous UI pieces
+│   ├── pages/            # Page components (CodeEditorPage)
+│   ├── context/          # React Context providers and types
+│   ├── hooks/            # Custom React hooks
+│   ├── data/             # Static CV data & styling definitions
+│   ├── main.tsx          # App entry point
+│   └── index.css         # Global styles
+├── index.html
+├── package.json
+├── tsconfig.json
+└── vite.config.ts
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Components & Pages
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- **Home.tsx**: Landing page
+- **CodeEditorPage.tsx**: Interactive code editor with live preview
+- **Terminal** components: Custom terminal simulation
+- **NavbarMenu.tsx**: Responsive navigation
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Context & Hooks
+
+- **EditorContext**: Manages editor state across pages
+- **useEditorContext**: Hook for accessing and updating editor state
+
+## Data & Styles
+
+- CV content organized under `src/data/cv/index.ts`
+- Styles and themes defined in `src/data/cv/styles.ts`
