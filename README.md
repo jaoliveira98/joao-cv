@@ -1,4 +1,4 @@
-# joao-cv
+# MY CV
 
 A modern interactive CV portfolio built with React, TypeScript, and Vite, featuring a live code editor interface and customizable styling.
 
@@ -20,7 +20,7 @@ A modern interactive CV portfolio built with React, TypeScript, and Vite, featur
 
 ## Demo
 
-screenshot to be added
+<img width="2560" height="1440" alt="demo" src="https://github.com/user-attachments/assets/13e1dc6d-fe67-42a8-9a13-eceeb43554e8" />
 
 ## Features
 
