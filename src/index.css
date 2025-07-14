@@ -4,7 +4,7 @@
   font-weight: 400;
 
   /* Color Variables */
-  --color-bg-dark: #181616;
+  --color-bg-dark: #1f1f1f;
   --color-bg-terminal: #303030;
   --color-border-gray: #6a6a6a;
   --color-text-light-gray: #c8c8c8;
@@ -14,6 +14,9 @@
   --color-terminal-yellow: #ffbd2e;
   --color-terminal-green: #27c93f;
   --color-active-nav: rgb(158, 188, 219);
+
+  /* RGB values for use in rgba() functions */
+  --color-text-light-gray-rgb: 200, 200, 200;
 }
 
 * {
@@ -22,5 +25,55 @@
 }
 
 body {
-  background: var(--color-bg-dark);
+  background-color: var(--color-bg-dark);
+  background-image: linear-gradient(
+      0deg,
+      transparent 9%,
+      rgba(var(--color-text-light-gray-rgb), 0.2) 10%,
+      rgba(var(--color-text-light-gray-rgb), 0.2) 12%,
+      transparent 13%,
+      transparent 29%,
+      rgba(var(--color-text-light-gray-rgb), 0.1) 30%,
+      rgba(var(--color-text-light-gray-rgb), 0.1) 31%,
+      transparent 32%,
+      transparent 49%,
+      rgba(var(--color-text-light-gray-rgb), 0.1) 50%,
+      rgba(var(--color-text-light-gray-rgb), 0.1) 51%,
+      transparent 52%,
+      transparent 69%,
+      rgba(var(--color-text-light-gray-rgb), 0.1) 70%,
+      rgba(var(--color-text-light-gray-rgb), 0.1) 71%,
+      transparent 72%,
+      transparent 89%,
+      rgba(var(--color-text-light-gray-rgb), 0.1) 90%,
+      rgba(var(--color-text-light-gray-rgb), 0.1) 91%,
+      transparent 92%,
+      transparent
+    ),
+    linear-gradient(
+      90deg,
+      transparent 9%,
+      rgba(var(--color-text-light-gray-rgb), 0.2) 10%,
+      rgba(var(--color-text-light-gray-rgb), 0.2) 12%,
+      transparent 13%,
+      transparent 29%,
+      rgba(var(--color-text-light-gray-rgb), 0.1) 30%,
+      rgba(var(--color-text-light-gray-rgb), 0.1) 31%,
+      transparent 32%,
+      transparent 49%,
+      rgba(var(--color-text-light-gray-rgb), 0.1) 50%,
+      rgba(var(--color-text-light-gray-rgb), 0.1) 51%,
+      transparent 52%,
+      transparent 69%,
+      rgba(var(--color-text-light-gray-rgb), 0.1) 70%,
+      rgba(var(--color-text-light-gray-rgb), 0.1) 71%,
+      transparent 72%,
+      transparent 89%,
+      rgba(var(--color-text-light-gray-rgb), 0.1) 90%,
+      rgba(var(--color-text-light-gray-rgb), 0.1) 91%,
+      transparent 92%,
+      transparent
+    );
+  height: 100%;
+  background-size: 50px 50px;
 }
