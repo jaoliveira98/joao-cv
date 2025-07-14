@@ -1,17 +1,29 @@
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 
+const menuItems = [
+  {
+    name: "homepage.html",
+    link: "/",
+    label: "Navigate to homepage",
+  },
+  {
+    name: "styles.css",
+    link: "/styles.css",
+    label: "Navigate to styles",
+  },
+];
+
 const NavbarMenu = () => {
   return (
     <Tabs>
-      <Tab>
-        <StyledNavLink to="/" end>
-          homepage.html
-        </StyledNavLink>
-      </Tab>
-      <Tab>
-        <StyledNavLink to="/code-snippets">code-snippets.ts</StyledNavLink>
-      </Tab>
+      {menuItems.map((menuItem, index) => (
+        <Tab key={index}>
+          <StyledNavLink to={menuItem.link} aria-label={menuItem.label} end>
+            {menuItem.name}
+          </StyledNavLink>
+        </Tab>
+      ))}
     </Tabs>
   );
 };

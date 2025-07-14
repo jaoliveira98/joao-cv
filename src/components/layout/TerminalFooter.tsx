@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { CiLinkedin } from "react-icons/ci";
 
 const TerminalFooter = () => {
   return (
@@ -8,7 +9,8 @@ const TerminalFooter = () => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        linkedin.com/in/joao-cv
+        <CiLinkedin />
+        linkedin.com/in/joao-aguiam
       </a>
     </FooterWrapper>
   );
@@ -30,6 +32,10 @@ const FooterWrapper = styled.div`
   a {
     color: var(--color-text-light-gray);
     text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    justify-content: center;
   }
 `;
 
