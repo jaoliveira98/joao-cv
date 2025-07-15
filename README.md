@@ -4,7 +4,7 @@ A modern interactive CV portfolio built with React, TypeScript, and Vite, featur
 
 ## Table of Contents
 
-- [Demo](#demo)
+- [Live website](#live)
 - [Features](#features)
 - [Tech Stack](#tech-stack)
 - [Getting Started](#getting-started)
@@ -18,9 +18,9 @@ A modern interactive CV portfolio built with React, TypeScript, and Vite, featur
 - [Contributing](#contributing)
 - [License](#license)
 
-## Demo
+## Live website
 
-<img width="2560" height="1440" alt="demo" src="https://github.com/user-attachments/assets/13e1dc6d-fe67-42a8-9a13-eceeb43554e8" />
+[<img width="3460" height="2240" alt="joao-cv vercel app_" src="https://github.com/user-attachments/assets/a662fca9-b8f9-4a78-8446-f827311d5a77" />](https://joao-cv.vercel.app/)
 
 ## Features
 
