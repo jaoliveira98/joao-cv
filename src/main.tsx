@@ -5,9 +5,11 @@ import "./index.css";
 import Home from "./pages/Home.tsx";
 import Styles from "./pages/Styles.tsx";
 import { EditorProvider } from "./context/EditorContext.tsx";
+import { Analytics } from "@vercel/analytics/react";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
+    <Analytics />
     <EditorProvider>
       <BrowserRouter>
         <Routes>
